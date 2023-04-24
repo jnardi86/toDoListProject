@@ -6,7 +6,7 @@ const Task = ( {task, onDelete, onToggle}) => {
     return (
       <div className={`task ${task.recordar ? 
       'reminder' : '' }`} 
-      onClick={()=>onToggle(task.id)}>
+      onDoubleClick={()=>onToggle(task.id)}>
           <h3>{task.notas} <FaTimes style={{color: 'red' , cursor:'pointer'}} onClick={()=>onDelete(task.id)} /> 
           </h3>
           <p>{task.dia}</p>
